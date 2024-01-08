@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { createNewEntry, deleteEntry, getAllEntry, updateExistingEntry } from "../service";
-import { CourseCard } from "./CourseCard";
+import { CourseCard } from "./BookCard";
 
-export const CoursetTabView = () => {
+export const BookTabView = () => {
   const [data, setData] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [courseName, setCourseName] = useState("");

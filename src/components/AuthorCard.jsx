@@ -1,8 +1,6 @@
-import PropTypes from "prop-types";
-import React, { useRef, useState } from "react";
-import PokemonImage from "../assets/pokemon.webp";
+import React, {  useState } from "react";
 import { EditInput } from "./EditInput";
-import { deleteEntry, updateExistingEntry } from "../service";
+import {  updateExistingEntry } from "../service";
 import { useNavigate } from "react-router-dom";
 
 export const StudentCard = ({

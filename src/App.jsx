@@ -1,24 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AdminPage } from "./pages/AdminPage";
-import { DetailsPage } from "./pages/DetailsPage";
+import { ReadersPage } from "./pages/ReadersPage";
 import { HomePage } from "./pages/HomePage";
-import { InstructorPage } from "./pages/InstructorPage";
+import { AuthorsPage } from "./pages/AuthorsPage";
+import { BooksPage } from "./pages/BooksPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage></HomePage>}></Route>
-      <Route
-        path="/details/student/:id"
-        element={<DetailsPage></DetailsPage>}
-      ></Route>
-      <Route path="/admin" element={<AdminPage></AdminPage>}></Route>
-      <Route
-        path="/instructor"
-        element={<InstructorPage></InstructorPage>}
-      ></Route>
+     <Route path="/books" element={<BooksPage></BooksPage>}></Route>
+     <Route path="/authors" element={<AuthorsPage></AuthorsPage>}></Route>
+     <Route path="/readers" element={<ReadersPage></ReadersPage>}></Route>
     </Routes>
   );
 }

@@ -17,12 +17,11 @@ export const HomePage = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className=" w-screen  h-screen flex justify-center items-center gap-10">
 
-      <div className="pb-24">
-            <Link to={"/admin"} className="bg-white block text-black my-2 py-4 px-20 rounded-lg text-center"> Admin </Link>
-            <Link to={"/instructor"} className="bg-white block text-black my-2 py-4 px-20 rounded-lg text-center"> Instructor </Link>
-      </div>
+            <Link to={"/books"} className="bg-blue-600 text-white block  my-2 py-4 px-20 rounded-lg text-center"> Books </Link>
+            <Link to={"/readers"} className="bg-blue-600 text-white block  my-2 py-4 px-20 rounded-lg text-center"> Readers </Link>
+            <Link to={"/authors"} className="bg-blue-600 text-white block  my-2 py-4 px-20 rounded-lg text-center"> Authors </Link>
     
     </div>
   );

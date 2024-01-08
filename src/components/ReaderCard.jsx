@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useRef, useState } from "react";
-import PokemonImage from "../assets/pokemon.webp";
 import { EditInput } from "./EditInput";
-import { deleteEntry, updateExistingEntry } from "../service";
+import {  updateExistingEntry } from "../service";
 
 export const InstructorCard = ({ id, instructorName, instructorSalary, officeLocation, handleDelete }) => {
     const [name, setName] = useState(instructorName);
