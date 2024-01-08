@@ -79,10 +79,6 @@ export const updateExistingEntry = async (
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
-    console.log("Update - ", data);
-
-    return data;
   } catch (error) {
     console.error("There was an error!", error);
   }
