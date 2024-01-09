@@ -14,7 +14,6 @@ export const EditInput = ({
         <input
           className="bg-black/20"
           placeholder={placeholder}
-          autoFocus
           value={data ?? ""}
           onChange={(e) => setData(e.target.value)}
         ></input>
