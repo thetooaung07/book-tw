@@ -84,6 +84,27 @@ export const updateExistingEntry = async (
   }
 };
 
+
+export const updateReaderRecomm = async (
+  url,
+  jsObject
+) => {
+  
+    const response = await fetch(baseUrl + url , {
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      method: "PUT",
+      body: JSON.stringify(jsObject),
+    });
+
+    console.log("Update res - " ,response);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+
+};
+
 export const deleteEntry = async (
   url,
   entryId

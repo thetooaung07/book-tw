@@ -43,21 +43,21 @@ export const BookDetailsPage = () => {
               <dt className="font-medium text-gray-900">Rating</dt>
               <dd className="text-gray-700 sm:col-span-2">{data.rating}</dd>
             </div>
-            <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+           {data.wroteBy && <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
               <dt className="font-medium text-gray-900">Wrote By</dt>
               <dd className="text-gray-700 sm:col-span-2">
                 <span className="font-bold"> {data.wroteBy.authorName}</span>
               </dd>
-            </div>
-            <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+            </div>}
+           { data.readBy && <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
               <dt className="font-medium text-gray-900">Read By</dt>
               <dd className="text-gray-700 sm:col-span-2">
                 This book is currently read by
                 <span className="font-bold"> {data.readBy.length}&nbsp;</span>
                 people
               </dd>
-            </div>
-            <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+            </div>}
+           { data.favourites && <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
               <dt className="font-medium text-gray-900">Favourite</dt>
               <dd className="text-gray-700 sm:col-span-2">
                 This book is recently favourited by
@@ -65,7 +65,7 @@ export const BookDetailsPage = () => {
                   &nbsp;{data.favourites.readerName}&nbsp;
                 </span>
               </dd>
-            </div>
+            </div>}
           </dl>
         )}
       </div>

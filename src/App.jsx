@@ -6,6 +6,7 @@ import { BookDetailsPage } from "./pages/BookDetailsPage";
 import { BooksPage } from "./pages/BooksPage";
 import { HomePage } from "./pages/HomePage";
 import { ReadersPage } from "./pages/ReadersPage";
+import { AddToRecommandPage } from "./pages/AddToRecommandPage";
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
       <Route
         path="/book/:id"
         element={<BookDetailsPage></BookDetailsPage>}
+      ></Route>
+
+      <Route
+        path="/reader/:id/books"
+        element={<AddToRecommandPage></AddToRecommandPage>}
       ></Route>
       <Route path="/authors" element={<AuthorsPage></AuthorsPage>}></Route>
       <Route path="/readers" element={<ReadersPage></ReadersPage>}></Route>

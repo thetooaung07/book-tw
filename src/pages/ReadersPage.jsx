@@ -100,14 +100,14 @@ export const ReaderRow = ({ readerId, readerName, readerContact, setData }) => {
       </td>
 
       {/* View */}
-      {/*    <td className="text-left px-4 py-2">
+         <td className="text-left px-4 py-2">
         <Link
-          to={`/reader/${readerId}`}
+          to={`/reader/${readerId}/books`}
           className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
         >
-          View
+          Books
         </Link>
-      </td> */}
+      </td>
       {/* Edit */}
       <td className="text-left px-4 py-2">
         {!edit && (
@@ -158,7 +158,7 @@ export const CreateNewReader = ({ setData }) => {
 
   const handleCreate = () => {
     if (name != "" || contact != "") {
-      createNewEntry("/reader/", {
+      createNewEntry("/reader", {
         readerName: name,
         contact: contact,
       }).then((res) => {
@@ -191,6 +191,8 @@ export const CreateNewReader = ({ setData }) => {
           placeholder={"Enter New Contact"}
         ></EditInput>
       </td>
+
+    <td></td>
 
       {/* Edit */}
       <td className="text-left px-4 py-2">

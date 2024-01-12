@@ -13,7 +13,6 @@ export const BooksPage = () => {
 
   useEffect(() => {
     getAllEntry("/book").then((res) => {
-      console.log(res);
       setData(res);
     });
   }, []);
@@ -107,9 +106,9 @@ export const BookRow = ({
   };
 
   const handleDelete = () => {
-    deleteEntry("/book/", bookId).then((res) =>
-      setData((prevData) => prevData.filter((el) => el.id === bookId))
-    );
+    deleteEntry("/book/", bookId).then((res) => {
+      setData((prevData) => prevData.filter((el) => el.bookId !== bookId));
+  });
   };
 
   return (
@@ -229,7 +228,7 @@ export const CreateNewBook = ({ setData }) => {
       pubYear != "" ||
       rating != ""
     ) {
-      createNewEntry("/book/", {
+      createNewEntry("/book", {
         bookTitle: title,
         isbn: isbn,
         genre: genre,
